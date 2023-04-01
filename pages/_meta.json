@@ -1,15 +1,18 @@
 {
-  "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
+  "index": {
+    "title": "Home",
+    "type": "page"
+  },
+  "cplusplus_syntax": {
+    "title": "C++基礎語法",
+    "type": "page"
+  },
+  "algorithm": {
+    "title": "演算法",
+    "type": "page"
+  },
   "about": {
     "title": "About",
     "type": "page"
-  },
-  "contact": {
-    "title": "Contact ↗",
-    "type": "page",
-    "href": "https://twitter.com/shuding_",
-    "newWindow": true
   }
 }
