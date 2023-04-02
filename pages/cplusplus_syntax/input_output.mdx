@@ -1,0 +1,29 @@
+
+
+這兩篇講很清楚了，就不複製貼上了。
+- [基本輸入輸出](https://emanlaicepsa.github.io/2020/10/26/0-2/)
+- [WIWIHO的競程筆記-I/O Stream](https://cp.wiwiho.me/iostream/)
+
+範例
+```cpp copy
+int a;
+string s;
+cin >> a >> s;
+cout << a + 5 << ' ' << s << endl;
+```
+> endl相當於換行（還有flush的功能，但可以先不用知道）
+
+## 輸入優化
+輸入內容太多，有時候會造成執行時間太慢，cin/cout可以加入這兩行加速。
+
+[WIWIHO的競程筆記-I/O 優化](https://cp.wiwiho.me/io-optimize/)
+```cpp copy
+#include <iostream>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    // your code here
+}
+```

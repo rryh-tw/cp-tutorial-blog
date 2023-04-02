@@ -1,0 +1,68 @@
+import { Callout } from 'nextra-theme-docs'
+
+每個變數都有一個型別，我們會說「v有型別T」或是「v是一個T」。例如：b是一個int。
+
+變數名稱不能使用保留字。例如：cout, INT_MAX, max…。
+
+```cpp
+int a;// 沒有初始化，系統不一定會初始為0！！ 
+int b = 10; 
+long long c = 9e18; 
+double d = 3.1415926; 
+string s = "monkey"; 
+```
+
+## `int`整數
+- Example
+    - 是int：`1`, `0`, `-200`, `1000000000`, `-2147483648`
+    - 不是int：`'1'`, `"1234"`, `0.`, `12.43`
+
+
+ 
+<Callout type="warning" emoji="⚠️">
+
+int 與long long的差異在與可以儲存的數值範圍<br />
+int表示範圍: $$-2*10^9$$ ~ $$2*10^9$$  (必記！！)<br />
+long long表示範圍: $$-9*10^{18}$$  ~ $$9*10^{18}$$  (必記！！)
+</Callout>
+
+## `double`雙精度浮點數
+- Example
+    - 是double：`100`, `.12`, `-43.21`
+
+## `char`字元
+- 使用[ASCII](https://en.cppreference.com/w/cpp/language/ascii)編碼
+- 單引號（''）
+- Example
+    - 是char：`'a'`, `'0'`, `'\n'`
+
+## `string`字串
+- 由零到多個char組成
+- Example
+    - "123", "-2", "haha\n", "o\nk", "   space ”
+    - "a", ""
+
+"o\nk"意思是o與k中間有個換行字元'\n'，印出來如下。
+```
+o
+k
+```
+
+## 型別轉換
+```cpp
+int a = 1.6;    // 浮點數轉換為int，小數部分捨去。
+int b = -2.4;
+int c = 'a';    // 字元轉換為ASCII代碼的數值
+cout << a << ' ' << b << ' ' << c << endl; // 輸出「1 -2 97」。
+
+int d1 = 5, d2 = 3;
+cout << d1 / d2 << endl;    // d1除d2向下取整，輸出「1」。
+ 
+double d = 0.3;
+int e = 5;
+cout << d / e << ' ' << e / d << endl;  // 皆為double，輸出「0.06 16.6667」。
+cout << int (d/e) << endl;              // 強制轉成int，輸出「0」。
+cout << char (97) << endl;              // 用ASCII編碼取得字元，輸出「a」。
+```
+
+

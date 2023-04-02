@@ -1,9 +1,101 @@
+## 第一個C++程式
+```cpp copy
+#include <iostream>
+ 
+int main() {
+    std::cout << "Hello, World\n";
+}
+```
 
+- 大括號`{  }` 代表「群組」，表示函式本體的開始與結束。
+- 全域函式`main()`為C++程式執行的開端。
+- 從main()開始執行，且只能有一個。
+- `#include<iostream>`把標準資料流(stream)I/O功能的宣告式包含進來。[iostream函式原檔](https://github.com/gcc-mirror/gcc/blob/master/libstdc%2B%2B-v3/include/std/iostream)
+- `<<`會把第二個引數寫到第一個引數中
+- `cout`為標準輸出流
+- `std`是命名空間，說明cout這個變數的來源，避免造成混用。範例
+
+## main函式
+main函式為程式開始執行後，電腦首先會呼叫的函式，當我們想理解程式碼的執行順序，可以用逐行trace code的方式。
+> 使用debugger有助於理解程式執行順序~
+```cpp copy
+#include <iostream>
+using namespace std;
+ 
+bool isprime(int x) {               // 4
+    // your code ...                // 5
+    // ...                          // 6
+    // ...                          // 7
+}                                   
+ 
+int main() {                        // 1 start from here
+    int a = 12;                     // 2
+    if(isprime(a)) {                // 3
+        cout << "It's Prime!\n";     // 8-a
+    } else {                        // 8-b
+        cout << "No way...\n";      // 9-b
+    }                               
+                                    // 9-a, 10-b
+}
+
+```
+> 函式（function）與if-else在之後的章節會在做說明
+>
+> 以上執行順序分兩條，第一條從1, 2, 3走到8-a, 9-a，另一條經過8-b, 9-b, 10-b。
+
+## std命名空間
+```cpp copy showLineNumbers {6}
+#include <iostream>
+ 
+int main() {
+    int cout = 5;
+    // 知道cout是從std來的
+    std::cout << cout;
+}
+```
+在第6行中，右邊的`cout`為第4行自己定義的變數；左邊則是從std命名空間來的`cout`。
+
+為了方便，我們可以在一開始宣告我們整個檔案都使用std命名空間的變數，避免每次使用cout都要額外打很多字。
+但如此一來，我們自己宣告的變數名稱，也不能再使用std命名空間相同的名稱。
+```cpp copy
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Hello, world!\n";
+}
+```
 ```cpp
 #include <iostream>
 using namespace std;
 
 int main() {
-
+    int cout; // error
 }
 ```
+
+## `return 0`
+在網路上也可以看到入下方的架構
+```cpp copy
+#include <iostream>
+using namespace std;
+
+int main() {
+    // your code
+    return 0;
+}
+```
+在`main`函式中，`return 0`告訴系統程式順利執行完畢，若回傳的數字非0，則表示有問題。
+若我們為撰寫這一行，電腦在編譯程式時會自動幫我們加進去，因此可以省略。
+
+## 最終架構
+總結我們一開始寫程式時，可以先寫出如下的架構。
+```cpp copy
+#include <iostream>
+using namespace std;
+
+int main() {
+    // your code here
+}
+```
+> `//`為註解，程式執行時會忽略此行
