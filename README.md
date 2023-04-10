@@ -1,23 +1,11 @@
-# Nextra Docs Template 
+# cp-tutorial-blog
 
-This is a template for creating documentation with [Nextra](https://nextra.site).
+這是一份致力與幫助大家學習C++以及入手演算法競賽的網站。
+[網站連結](https://remi-cp-blog.vercel.app/about)
 
-[**Live Demo →**](https://nextra-docs-template.vercel.app)
+使用[Nextra](https://nextra.site)框架。
+部署於[vercel](https://vercel.com/)
 
-[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
+> reminder for myself
+> Run `npm run dev` to start the development server and visit localhost:3000.
 
-## Quick Start
-
-Click the button to clone this repository and deploy it on Vercel:
-
-[![](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra-docs-template&showOptionalTeamCreation=false)
-
-## Local Development
-
-First, run `pnpm i` to install the dependencies.
-
-Then, run `pnpm dev` to start the development server and visit localhost:3000.
-
-## License
-
-This project is licensed under the MIT License.
