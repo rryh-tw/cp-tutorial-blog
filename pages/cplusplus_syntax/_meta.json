@@ -1,8 +1,9 @@
 {
-    "introduction": "簡介",
-    "basic_struct": "基礎架構",
-    "error": "錯誤類別",
-    "variable": "變數型別與宣告",
-    "input_output": "輸入輸出"
-  }
+  "how_to_cp": "競技程式指南",
+  "introduction": "簡介",
+  "basic_struct": "基礎架構",
+  "error": "錯誤類別",
+  "variable": "變數型別與宣告",
+  "input_output": "輸入輸出"
+}
   
